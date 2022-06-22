@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<DebugType Condition=" '$(Configuration)' == 'Release' ">None</DebugType>
+		<TargetFramework>net6.0</TargetFramework>
+		<RunTimeIdentifier>win10-x64</RunTimeIdentifier>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ProjectGuid>{8AEB687D-3AC6-40F3-983A-32D04F4AC251}</ProjectGuid>
+		<Company>QuikTrip® Corporation</Company>
+		<Product>EnterpriseServiceManagement API</Product>
+		<PackageId>EnterpriseServiceManagement API</PackageId>
+		<Version>2.0.0</Version>
+		<Copyright>Copyright© 2021 QuikTrip Corporation. All rights reserved.</Copyright>
+		<Authors>Enterprise Platform Integrations and Engineering</Authors>
+		<Description>EnterpriseServiceManagement API is the source for integration with CRM ticketing applications.</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="6.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+		<PackageReference Include="QT.Standard.Cryptography" Version="1.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.1" />
+	</ItemGroup>
+	
+
+	<ItemGroup>
+		<ProjectReference Include="..\QT.EnterpriseServiceManagement.Api.Domain\QT.EnterpriseServiceManagement.Api.Domain.csproj" />
+		<ProjectReference Include="..\QT.EnterpriseServiceManagement.Api.Services\QT.EnterpriseServiceManagement.Api.Services.csproj" />
+	</ItemGroup>
+
+</Project>

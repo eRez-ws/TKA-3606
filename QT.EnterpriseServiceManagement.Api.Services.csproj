@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<DebugType Condition=" '$(Configuration)' == 'Release' ">None</DebugType>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<ProjectGuid>{76AF7F07-ABB3-44D4-90C6-E039C57CDD81}</ProjectGuid>
+		<Company>QuikTrip® Corporation</Company>
+		<Version>2.0.0</Version>
+		<Copyright>Copyright© 2021 QuikTrip Corporation. All rights reserved.</Copyright>
+		<Authors>Enterprise Platform Integrations and Engineering</Authors>
+		<Description>EnterpriseServiceManagement API is the source for integration with CRM ticketing applications.</Description>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Azure.Identity" Version="1.6.0" />
+		<PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.3.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.WebApiCompatShim" Version="2.2.0" />
+		<PackageReference Include="System.DirectoryServices" Version="6.0.0" />
+		<PackageReference Include="System.DirectoryServices.AccountManagement" Version="6.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\QT.EnterpriseServiceManagement.Api.Domain\QT.EnterpriseServiceManagement.Api.Domain.csproj" />
+	</ItemGroup>
+</Project>
